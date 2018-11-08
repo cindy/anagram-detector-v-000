@@ -4,9 +4,9 @@ class Anagram
   end
 
   def match(words)
-    word = @word.split
+    word = @word.split.sort
     words.select do |w|
-      w.split == word
+      w.split.sort == word
     end
   end
 end
