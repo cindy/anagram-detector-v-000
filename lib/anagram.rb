@@ -3,6 +3,10 @@ class Anagram
     @word = word
   end
 
-  def match
+  def match(words)
+    word = @word.split
+    words.select do |w|
+      w.split == word
+    end
   end
 end
