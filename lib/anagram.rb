@@ -4,7 +4,7 @@ class Anagram
   end
 
   def match(words)
-    word = @word.split.sort
+    word = @word.split(//).sort
     words.select do |w|
       require 'pry'; binding.pry
       w.split.sort == word
